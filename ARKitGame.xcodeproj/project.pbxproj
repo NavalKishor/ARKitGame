@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		193FA28F20E94DBA00DE50C6 /* SpaceShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193FA28E20E94DBA00DE50C6 /* SpaceShip.swift */; };
+		193FA29721CFF42100DE50C6 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193FA29621CFF42100DE50C6 /* CarViewController.swift */; };
+		193FA29921D0211800DE50C6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193FA29821D0211800DE50C6 /* Utilities.swift */; };
+		193FA29C21D0263600DE50C6 /* arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 193FA29A21D0263500DE50C6 /* arrow-up.png */; };
+		193FA29D21D0263600DE50C6 /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 193FA29B21D0263600DE50C6 /* arrow-down.png */; };
 		1958398B20E94BF500A3BC92 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1958398A20E94BF500A3BC92 /* art.scnassets */; };
 		19BBF17520E93C61008D1154 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBF17420E93C61008D1154 /* AppDelegate.swift */; };
 		19BBF17720E93C61008D1154 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBF17620E93C61008D1154 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		193FA28E20E94DBA00DE50C6 /* SpaceShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShip.swift; sourceTree = "<group>"; };
+		193FA29621CFF42100DE50C6 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		193FA29821D0211800DE50C6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		193FA29A21D0263500DE50C6 /* arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up.png"; sourceTree = "<group>"; };
+		193FA29B21D0263600DE50C6 /* arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down.png"; sourceTree = "<group>"; };
 		1958398A20E94BF500A3BC92 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		19BBF17120E93C61008D1154 /* ARKitGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BBF17420E93C61008D1154 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,14 +66,18 @@
 		19BBF17320E93C61008D1154 /* ARKitGame */ = {
 			isa = PBXGroup;
 			children = (
+				193FA29B21D0263600DE50C6 /* arrow-down.png */,
+				193FA29A21D0263500DE50C6 /* arrow-up.png */,
 				19BBF17420E93C61008D1154 /* AppDelegate.swift */,
 				193FA28E20E94DBA00DE50C6 /* SpaceShip.swift */,
 				19BBF17620E93C61008D1154 /* ViewController.swift */,
+				193FA29621CFF42100DE50C6 /* CarViewController.swift */,
 				1958398A20E94BF500A3BC92 /* art.scnassets */,
 				19BBF17820E93C61008D1154 /* Main.storyboard */,
 				19BBF17B20E93C64008D1154 /* Assets.xcassets */,
 				19BBF17D20E93C64008D1154 /* LaunchScreen.storyboard */,
 				19BBF18020E93C65008D1154 /* Info.plist */,
+				193FA29821D0211800DE50C6 /* Utilities.swift */,
 			);
 			path = ARKitGame;
 			sourceTree = "<group>";
@@ -129,9 +141,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BBF17F20E93C64008D1154 /* LaunchScreen.storyboard in Resources */,
+				193FA29C21D0263600DE50C6 /* arrow-up.png in Resources */,
 				1958398B20E94BF500A3BC92 /* art.scnassets in Resources */,
 				19BBF17C20E93C64008D1154 /* Assets.xcassets in Resources */,
 				19BBF17A20E93C61008D1154 /* Main.storyboard in Resources */,
+				193FA29D21D0263600DE50C6 /* arrow-down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193FA29721CFF42100DE50C6 /* CarViewController.swift in Sources */,
 				193FA28F20E94DBA00DE50C6 /* SpaceShip.swift in Sources */,
 				19BBF17720E93C61008D1154 /* ViewController.swift in Sources */,
+				193FA29921D0211800DE50C6 /* Utilities.swift in Sources */,
 				19BBF17520E93C61008D1154 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

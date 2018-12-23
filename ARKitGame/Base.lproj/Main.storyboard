@@ -22,7 +22,7 @@
                                 <rect key="frame" x="16" y="20" width="343" height="604"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfp-05-4dJ">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfp-05-4dJ">
                                 <rect key="frame" x="16" y="639" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -36,11 +36,110 @@
                     <connections>
                         <outlet property="counterLabel" destination="hfp-05-4dJ" id="rb7-ps-cDD"/>
                         <outlet property="sceneView" destination="ZOm-mr-VJT" id="Wvt-up-GjE"/>
+                        <segue destination="dMf-w0-A3i" kind="presentation" identifier="toCarSegue" id="9z5-Yj-mlA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-449" y="138"/>
+        </scene>
+        <!--Car View Controller-->
+        <scene sceneID="8bv-hI-SJE">
+            <objects>
+                <viewController id="dMf-w0-A3i" customClass="CarViewController" customModule="ARKitGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2eb-Ss-NNU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hu3-BL-O84">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ber-7w-wEr">
+                                <rect key="frame" x="118" y="617" width="139" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="C7O-gs-oUj"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Okq-hg-deU"/>
+                                </constraints>
+                                <state key="normal" title="I want Audi"/>
+                                <connections>
+                                    <action selector="addCar:" destination="dMf-w0-A3i" eventType="touchUpInside" id="gsH-Ub-rdr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUq-ui-Efs">
+                                <rect key="frame" x="257" y="607" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="G4M-2b-zfG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Qs1-o5-55j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="front" image="arrow-up.png"/>
+                                <connections>
+                                    <action selector="goFront:" destination="dMf-w0-A3i" eventType="touchUpInside" id="kr8-87-opy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0r-Yb-vnJ">
+                                <rect key="frame" x="58" y="607" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="PXG-cX-Poy"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="neE-YU-Pfa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="back" image="arrow-down.png"/>
+                                <connections>
+                                    <action selector="goBack:" destination="dMf-w0-A3i" eventType="touchUpInside" id="zBQ-uH-QDZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxq-fQ-79K">
+                                <rect key="frame" x="340" y="30" width="25" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="oSa-y5-zVp"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="yCX-X8-6XP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="closeToBack:" destination="dMf-w0-A3i" eventType="touchUpInside" id="xN8-Rm-y5C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="bottom" secondItem="c0r-Yb-vnJ" secondAttribute="bottom" constant="20" id="4Nc-I6-oDt"/>
+                            <constraint firstItem="JUq-ui-Efs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="top" constant="15" id="9ND-v7-yAM"/>
+                            <constraint firstItem="Ber-7w-wEr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="c0r-Yb-vnJ" secondAttribute="trailing" constant="10" id="CY7-Yk-Uc8"/>
+                            <constraint firstItem="c0r-Yb-vnJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="top" constant="15" id="FYc-fC-Wjy"/>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="JUq-ui-Efs" secondAttribute="trailing" constant="58" id="H13-wk-b9T"/>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="trailing" secondItem="Vxq-fQ-79K" secondAttribute="trailing" constant="10" id="Hmn-44-EWq"/>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vxq-fQ-79K" secondAttribute="bottom" constant="614" id="Jzk-qU-fnv"/>
+                            <constraint firstItem="Vxq-fQ-79K" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="top" constant="10" id="TF5-Yc-eEC"/>
+                            <constraint firstItem="JUq-ui-Efs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ber-7w-wEr" secondAttribute="trailing" id="TZj-w6-0lC"/>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="bottom" secondItem="JUq-ui-Efs" secondAttribute="bottom" constant="20" id="TuU-ou-3NI"/>
+                            <constraint firstItem="Ber-7w-wEr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="c0r-Yb-vnJ" secondAttribute="trailing" id="h43-Q7-8tH"/>
+                            <constraint firstItem="Vxq-fQ-79K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="leading" constant="100" id="hY8-Vw-9PR"/>
+                            <constraint firstItem="Ber-7w-wEr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="top" constant="15" id="loD-8g-1jc"/>
+                            <constraint firstItem="AsQ-53-QBI" firstAttribute="bottom" secondItem="Ber-7w-wEr" secondAttribute="bottom" constant="20" id="nPj-69-hGM"/>
+                            <constraint firstItem="JUq-ui-Efs" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ber-7w-wEr" secondAttribute="trailing" constant="10" id="qkD-c2-NkH"/>
+                            <constraint firstItem="c0r-Yb-vnJ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="AsQ-53-QBI" secondAttribute="leading" constant="58" id="yFF-hm-hEX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AsQ-53-QBI"/>
+                    </view>
+                    <connections>
+                        <outlet property="addCarButton" destination="Ber-7w-wEr" id="B0Z-QH-4D5"/>
+                        <outlet property="backButton" destination="c0r-Yb-vnJ" id="wor-7O-y5d"/>
+                        <outlet property="close" destination="Vxq-fQ-79K" id="xA6-ZH-bDU"/>
+                        <outlet property="frontButton" destination="JUq-ui-Efs" id="nwn-YO-TN6"/>
+                        <outlet property="sceneView" destination="Hu3-BL-O84" id="18a-e1-DeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLv-1W-1VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317.60000000000002" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow-down.png" width="512" height="512"/>
+        <image name="arrow-up.png" width="512" height="512"/>
+    </resources>
 </document>

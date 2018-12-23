@@ -23,6 +23,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // step 3 create object of SCNScence and set a refernce to our view
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapFunction))
+       // counterLabel.isUserInteractionEnabled = true
+        counterLabel.addGestureRecognizer(tap)
+        
         let scene = SCNScene()
         sceneView.scene = scene
     }
@@ -85,6 +90,14 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        print("tap working")
+        performSegue(withIdentifier: "toCarSegue", sender: self)
+        print("tap working after segue done")
+        
     }
 
 
